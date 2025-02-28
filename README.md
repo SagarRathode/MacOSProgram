@@ -61,6 +61,21 @@ gcc -g -Wall -o append append.m
 # step 5
 ./append   //run the program
 
+Here are some runs of the program:
+$ ls -l unix.txt
+ls: unix.txt: No such file or directory
+$ ./append
+$ ls -l unix.txt
+-rw------- 1 markd wheel 31
+$ cat unix.txt
+wheee, we have a log file open
+$ ./append
+$ ./append
+$ cat unix.txt
+wheee, we have a log file open 
+wheee, we have a log file open 
+wheee, we have a log file open
+
 
 great you done it
 
