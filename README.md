@@ -92,3 +92,6 @@ wheee, we have a log file open
 
 great you done it
 
+# next read carefully datasource.m because we using now foundation framework
+
+
