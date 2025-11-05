@@ -51,16 +51,18 @@ using : vi append.m  // create append.m file
 
 
 # step 3:
-
+```
 press esc :wq        //to save and exit from vi editor
-
+```
 # step 4 :
 compile program 
-
+```
 gcc -g -Wall -o append append.m
 //append.m file pass to compiler and compiler give executable file "append"
+```
 
 # step 5
+```
 ./append   //run the program
 
 Here are some runs of the program:
@@ -90,7 +92,7 @@ wheee, we have a log file open
 wheee, we have a log file open 
 
 wheee, we have a log file open
-
+```
 
 great you done it
 
