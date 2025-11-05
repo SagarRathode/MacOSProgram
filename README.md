@@ -12,45 +12,47 @@ using : vi append.m  // create append.m file
 # step 2.
 //write a program which open unix.txt file
 
+```
+  #import <errno.h> // for errno and strerror()
 
-#import <errno.h> // for errno and strerror()
+  #import <fcntl.h> // for open()
 
-#import <fcntl.h> // for open()
+  #import <stdio.h> // // for printf() and friends
 
-#import <stdio.h> // // for printf() and friends
+  #import <stdlib.h> // for EXIT_SUCCESS
 
-#import <stdlib.h> // for EXIT_SUCCESS
+  #import <string.h> //// for strerror()
 
-#import <string.h> //// for strerror()
+  #import <unistd.h> // // for STDOUT_FILENO
 
-#import <unistd.h> // // for STDOUT_FILENO
+  int main (void)
 
-int main (void)
+    {
 
-  {
-
-        close (STDOUT_FILENO);
+          close (STDOUT_FILENO);
         
-        // open a log file, write only, and to always automatically append.
+          // open a log file, write only, and to always automatically append.
         
-        // oh, and create the file if it doesn't exist already
+          // oh, and create the file if it doesn't exist already
         
-        int fd = open ("unix.txt", O_WRONLY | O_CREAT | O_APPEND,S_IRUSR | S_IWUSR);
+          int fd = open ("unix.txt", O_WRONLY | O_CREAT | O_APPEND,S_IRUSR | S_IWUSR);
         
-        if (fd == -1)
-        {
-                fprintf (stderr, "can't open log file. Error %d (%s)\n", errno, strerror(errno));
-                return EXIT_FAILURE;
-        }
-        printf ("wheee, we have a log file open\n");
+          if (fd == -1)
+          {
+                  fprintf (stderr, "can't open log file. Error %d (%s)\n", errno, strerror(errno));
+                  return EXIT_FAILURE;
+          }
+          printf ("wheee, we have a log file open\n");
         
-  return EXIT_SUCCESS;
+    return EXIT_SUCCESS;
 
-  }
+    }
+```
+
 
 # step 3:
 
-press esc :wq    //to save and exit from vi editor
+press esc :wq        //to save and exit from vi editor
 
 # step 4 :
 compile program 
